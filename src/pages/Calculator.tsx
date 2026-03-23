@@ -23,7 +23,7 @@ interface Student {
   grade: string;
 }
 
-const SUBJECTS = ["Subject 1", "Subject 2", "Subject 3", "Subject 4"];
+const SUBJECTS = ["Mathematics", "English", "Chemistry", "Biology", "Physics", "History"];
 
 function getGrade(mean: number): string {
   if (mean >= 70) return "A";
