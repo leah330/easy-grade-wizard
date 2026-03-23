@@ -47,7 +47,7 @@ function gradeColor(grade: string) {
 const Calculator_Page = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
-  const [marks, setMarks] = useState<string[]>(["", "", "", ""]);
+  const [marks, setMarks] = useState<string[]>(["", "", "", "", "", ""]);
   const [result, setResult] = useState<{ total: number; mean: number; grade: string } | null>(null);
   const [students, setStudents] = useState<Student[]>([]);
 
