@@ -23,7 +23,7 @@ interface Student {
   grade: string;
 }
 
-const SUBJECTS = ["Subject 1", "Subject 2", "Subject 3", "Subject 4"];
+const SUBJECTS = ["Mathematics", "English", "Chemistry", "Biology", "Physics", "History"];
 
 function getGrade(mean: number): string {
   if (mean >= 70) return "A";
@@ -47,7 +47,7 @@ function gradeColor(grade: string) {
 const Calculator_Page = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
-  const [marks, setMarks] = useState<string[]>(["", "", "", ""]);
+  const [marks, setMarks] = useState<string[]>(["", "", "", "", "", ""]);
   const [result, setResult] = useState<{ total: number; mean: number; grade: string } | null>(null);
   const [students, setStudents] = useState<Student[]>([]);
 
@@ -69,7 +69,7 @@ const Calculator_Page = () => {
     const nums = marks.map((m) => Number(m) || 0);
     setStudents((prev) => [...prev, { name: name.trim(), marks: nums, ...result }]);
     setName("");
-    setMarks(["", "", "", ""]);
+    setMarks(["", "", "", "", "", ""]);
     setResult(null);
   };
 
@@ -99,7 +99,7 @@ const Calculator_Page = () => {
               <Label>Student Name</Label>
               <Input placeholder="e.g. Leah" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {SUBJECTS.map((s, i) => (
                 <div key={s}>
                   <Label>{s}</Label>
