@@ -99,7 +99,7 @@ const Calculator_Page = () => {
               <Label>Student Name</Label>
               <Input placeholder="e.g. Leah" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {SUBJECTS.map((s, i) => (
                 <div key={s}>
                   <Label>{s}</Label>
