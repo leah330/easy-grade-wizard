@@ -69,7 +69,7 @@ const Calculator_Page = () => {
     const nums = marks.map((m) => Number(m) || 0);
     setStudents((prev) => [...prev, { name: name.trim(), marks: nums, ...result }]);
     setName("");
-    setMarks(["", "", "", ""]);
+    setMarks(["", "", "", "", "", ""]);
     setResult(null);
   };
 
